@@ -46,6 +46,9 @@ bool initialize_window(void) {
 
 void setup(void) {
     color_buffer = (uint32_t*) malloc(sizeof(uint32_t) * window_width * window_height);
+    if(!color_buffer) {
+        fprintf(stderr, "Error creating color buffer. \n");
+    }
 }
 
 void process_input(void) {
