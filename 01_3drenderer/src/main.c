@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "display.h"
+#include "vector.h"
 
 bool isRunning = false;
 
@@ -58,6 +59,8 @@ void render(void) {
 int main(void) {
     //create sdl window
     isRunning = initialize_window();
+
+    //vec3_t myvec = { 2.0, 3.0, -4.5 };
 
     setup();
     while (isRunning)
